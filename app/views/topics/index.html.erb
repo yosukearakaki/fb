@@ -3,10 +3,16 @@
     <p><%= notice %></p>
     <h1>タイムライン</h1>
       <%= link_to "新しく投稿する", new_topic_path, class: 'btn btn-default' %>
+
     <% @topics.each do |topic| %>
     <div class="row">
+      <div class="field">
+        <%= profile_img(topic.user) if profile_img(topic.user) %>
+      </div>
+      <p><%= topic.user.name if topic.user %>が投稿しました。</p>
+      <%= link_to topic_path(topic) do %>
       <h4><strong><%= topic.content %></strong></h4>
-      <p><%= topic.content %></p>
+      <% end %>
       <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success' %>
       <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
     </div>

@@ -444,6 +444,7 @@ template {
 
 img{
   max-width: 100%;
+  max-height: 700px;
 }
 
 .profile_img{

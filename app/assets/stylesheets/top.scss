@@ -50,32 +50,19 @@ header {
   }
 }
 
-.main-header {
-  padding-bottom: 15%;
-  width: 100%;
-  background-size: cover;
-  background-image: url("images-master/header.jpg");
-  background-attachment: fixed;
-}
-
-.main-header img {
-  display: block;
-  margin: 0 auto;
-  width: 25%;
-  padding-top: 15%;
-}
 
 .about {
-  background-color: white;
+  background-color: #F2F2F2;
   color: #333;
   padding: 80px;
+  height: 500px;
 }
 
 footer {
   width: 100%;
-  background-color:#2c3e50;
+  background-color: white;
   padding: 20px 0 10px 0;
-  color: white;
+  color: black;
   margin: auto;
   padding-bottom: 10px;
   font-size: 12px;
@@ -96,7 +83,7 @@ body {
   padding-bottom: 15%;
   width: 100%;
   background-size: cover;
-  background-color: white;
+  background-color: #F2F2F2;
   background-attachment: fixed;
 }
 

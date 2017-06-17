@@ -1,11 +1,15 @@
-<p><%= notice %></p>
-
-<h1>タイムライン</h1>
-
-<% @topics.each do |topic| %>
-  <p><%= topic.content %></p>
-  <%= link_to "編集", edit_topic_path(topic.id) %>
-  <%= link_to '削除', topic_path(topic.id), method: :delete, data:{confirm: '本当に削除して良いですか？'} %>
-<% end %>
-
-<%= link_to "投稿する", new_topic_path %>
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <h1>タイムライン</h1>
+      <%= link_to "新しく投稿する", new_topic_path, class: 'btn btn-default' %>
+    <% @topics.each do |topic| %>
+    <div class="row">
+      <h4><strong><%= topic.content %></strong></h4>
+      <p><%= topic.content %></p>
+      <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+    </div>
+    <% end %>
+  </div>
+</div>

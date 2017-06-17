@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.all.order(created_at: :desc)
     respond_to do |format|
       format.html
       format.js
@@ -13,6 +13,7 @@ class TopicsController < ApplicationController
   def show
     @comment = @topic.comments.build
     @comments = @topic.comments
+    Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
   end
 
   def new

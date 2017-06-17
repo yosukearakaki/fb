@@ -34,9 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
   gem 'letter_opener_web'
-
   gem 'dotenv-rails'
-
 end
 
 group :development, :test do
@@ -66,3 +64,5 @@ gem 'omniauth-facebook'
 
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'pusher'

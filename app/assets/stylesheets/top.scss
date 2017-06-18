@@ -50,7 +50,6 @@ header {
   }
 }
 
-
 .about {
   background-color: white;
   color: #333;
@@ -80,7 +79,8 @@ body {
 }
 
 .main-header {
-  padding-bottom: 15%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   background-size: cover;
   background-color: white;
@@ -102,4 +102,10 @@ body {
   background-color: #EFF5FB;
   padding: 80px;
   padding-bottom: 185px;
+}
+
+.box1 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
 }

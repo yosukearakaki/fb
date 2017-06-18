@@ -10,14 +10,6 @@
   <%= link_to "パスワードをお忘れですか？", new_password_path(resource_name) %><br />
 <% end -%>
 
-<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "メール認証を受け取れない方はこちら", new_confirmation_path(resource_name) %><br />
-<% end -%>
-
-<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-  <%= link_to "アンロックの手順を受け取れない方はこちら", new_unlock_path(resource_name) %><br />
-<% end -%>
-
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <%= link_to "#{OmniAuth::Utils.camelize(provider)}でサインイン", omniauth_authorize_path(resource_name, provider) %><br />

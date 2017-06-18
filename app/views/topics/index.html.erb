@@ -1,8 +1,8 @@
 <div class="container">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
     <p><%= notice %></p>
-    <h1>タイムライン</h1>
-      <%= link_to "新しく投稿する", new_topic_path, class: 'btn btn-default' %>
+    <h2>タイムライン </h2>
+    <%= link_to "新しく投稿する", new_topic_path, class: 'btn btn-primary' %>
 
     <% @topics.each do |topic| %>
     <div class="row">

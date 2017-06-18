@@ -10,12 +10,13 @@
       </ul>
     </div>
   <% end %>
-  
+
   <%= f.hidden_field :topic_id %>
   <div class="field">
     <%= f.text_field :content, placeholder: "内容", class: "form-control"  %>
   </div>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'コメント', class: 'btn btn-primary' %>
   </div>
 <% end %>

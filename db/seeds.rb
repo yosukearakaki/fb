@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+10.times do |n|
+    user_id = 4
+    content = Faker::Music.instrument
+    Topic.create!(user_id: user_id,
+                content: content,
+                )
+end

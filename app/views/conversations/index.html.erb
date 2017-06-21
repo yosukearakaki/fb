@@ -5,12 +5,18 @@
     </thead>
     <tbody>
       <% @conversations.each do |conversation| %>
-        <td>
-          <% if conversation.target_user(current_user).present? %>
-            <%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%>
+      <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
+        <div class="profile_img">
+          <td>
+            <% if conversation.target_user(current_user).present? %>
+            <%= image_tag conversation.target_user(current_user).image_url %>
+            <br><br>
+            <%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation) %>
           <% end %>
+        </div>
         </td>
       <% end %>
+      </div>
     </tbody>
   </table>
 </div>

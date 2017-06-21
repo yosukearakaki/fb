@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 10.times do |n|
-  Faker::Name.title
+  name = Faker::Name.title
   email = Faker::Internet.email
 #  avatar = Faker::Avatar.image
   image_url = Faker::Avatar.image

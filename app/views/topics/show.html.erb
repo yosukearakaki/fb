@@ -5,6 +5,7 @@
     <div class="topic-text">
       <p class="left"><%= link_to '戻る', topics_path %></p>
       <p class="left"><strong>内容</strong></p>
+      <p><%= image_tag @topic.image %></p>
       <p class="left"><%= @topic.content %></p>
       <% if current_user.id == @topic.user_id %>
         <p class="right">

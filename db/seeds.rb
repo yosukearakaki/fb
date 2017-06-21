@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 10.times do |n|
-  name = Faker::Pokemon.name
+  Faker::Name.title
   email = Faker::Internet.email
-  avatar = Faker::Avatar.image
+#  avatar = Faker::Avatar.image
   image_url = Faker::Avatar.image
   password = "password"
  User.create!(name: name,
-              avatar: avatar,
+#              avatar: avatar,
               image_url: image_url,
               email: email,
               password: password,
@@ -24,16 +24,16 @@
 end
 
 10.times do |n|
-    user_id = 4
+    user_id = 1
     content = Faker::Music.instrument
     Topic.create!(user_id: user_id,
-                content: content,
-                )
+                  content: content,
+                  )
 end
 
 10.times do |p|
-  topic_id = 3
-  user_id = 6
+  topic_id = 1
+  user_id = 1
   content = Faker::LordOfTheRings.character
   Comment.create!(user_id: user_id,
                   topic_id: topic_id,

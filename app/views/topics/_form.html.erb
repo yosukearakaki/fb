@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <%= f.label :画像 %>
+  　<%= image_tag @topic.image if @topic.image %>
+  <%= f.file_field :image, class: 'form-control' %>
+  <br>
   <%= f.label :content %>
   <%= f.text_field :content, class: 'form-control' %>
   <br>

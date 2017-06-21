@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   #変数PERMISSIBLE_ATTRIBUTESに配列[:name]を代入
-  PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache)
+  PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache image image_cache)
 
   protected
 
